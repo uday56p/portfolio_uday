@@ -7,21 +7,12 @@
 
 <style>
 :root {
-    --bg: #0b0b0b;
-    --text: #cfcfcf;
-    --heading: #ffffff;
-    --accent: #00ff41;
-    --card: #111;
+    --bg: #121212;
+    --surface: #1a1a1a;
     --border: #2a2a2a;
-}
-
-[data-theme="light"] {
-    --bg: #ffffff;
-    --text: #333333;
-    --heading: #000000;
-    --accent: #0a7f2e;
-    --card: #f7f7f7;
-    --border: #dddddd;
+    --text: #d0d0d0;
+    --muted: #9a9a9a;
+    --heading: #ffffff;
 }
 
 body {
@@ -29,7 +20,7 @@ body {
     padding: 20px;
     background: var(--bg);
     color: var(--text);
-    font-family: "Courier New", monospace;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     line-height: 1.6;
 }
 
@@ -39,153 +30,152 @@ body {
 }
 
 header {
-    border-bottom: 2px solid var(--accent);
-    padding-bottom: 15px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
     margin-bottom: 30px;
 }
 
 h1 {
     color: var(--heading);
-    margin-bottom: 5px;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.subtitle {
+    color: var(--muted);
+    margin-top: 6px;
+}
+
+.contact {
+    margin-top: 8px;
+}
+
+a {
+    color: var(--text);
+    text-decoration: underline;
+}
+
+a:hover {
+    color: var(--heading);
+}
+
+section {
+    margin-bottom: 35px;
 }
 
 h2 {
     color: var(--heading);
-    font-size: 1.1rem;
-    border-left: 4px solid var(--accent);
-    padding-left: 10px;
-    margin-top: 35px;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
 }
 
-a {
-    color: var(--accent);
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-.section {
-    margin-bottom: 30px;
+.skill-list p {
+    margin: 6px 0;
 }
 
 .project {
-    background: var(--card);
+    background: var(--surface);
     border: 1px solid var(--border);
-    padding: 15px;
+    padding: 16px;
     border-radius: 6px;
     margin-bottom: 15px;
 }
 
 .project-title {
     color: var(--heading);
-    font-weight: bold;
+    font-weight: 600;
+    margin-bottom: 6px;
 }
 
-.tags {
-    margin-top: 8px;
-}
-
-.tag {
-    display: inline-block;
-    font-size: 0.75rem;
-    padding: 2px 8px;
-    margin-right: 6px;
-    border: 1px solid var(--border);
-    border-radius: 4px;
+.project-desc {
     color: var(--text);
 }
 
-.toggle {
-    float: right;
-    cursor: pointer;
+.project-meta {
+    margin-top: 8px;
     font-size: 0.85rem;
-    border: 1px solid var(--border);
-    padding: 4px 8px;
-    border-radius: 4px;
+    color: var(--muted);
+}
+
+footer {
+    border-top: 1px solid var(--border);
+    padding-top: 15px;
+    color: var(--muted);
+    font-size: 0.85rem;
 }
 </style>
-
-<script>
-function toggleTheme() {
-    const html = document.documentElement;
-    html.dataset.theme =
-        html.dataset.theme === "light" ? "dark" : "light";
-}
-</script>
 </head>
 
 <body>
 <div class="container">
 
 <header>
-    <span class="toggle" onclick="toggleTheme()">Toggle Theme</span>
     <h1>Uday Prakash</h1>
-    <p>GLA University — B.Tech Computer Science (2025)</p>
-    <p>Email: <a href="mailto:puday8994@gmail.com">puday8994@gmail.com</a></p>
-    <p>Entry-level software developer | Python, JavaScript | GitHub-based workflow</p>
+    <div class="subtitle">
+        GLA University — B.Tech Computer Science (2025)
+    </div>
+    <div class="contact">
+        Email: <a href="mailto:puday8994@gmail.com">puday8994@gmail.com</a><br>
+        GitHub: <a href="https://github.com/uday56p">github.com/uday56p</a>
+    </div>
 </header>
 
-<div class="section">
+<section>
 <h2>Technical Skills</h2>
-<p><strong>Languages:</strong> Python, C, JavaScript</p>
-<p><strong>Web:</strong> HTML5, CSS3, JavaScript, GitHub Pages</p>
-<p><strong>Tools & OS:</strong> Linux, Windows, Git, GitHub</p>
+<div class="skill-list">
+    <p><strong>Languages:</strong> Python, C, JavaScript</p>
+    <p><strong>Web:</strong> HTML5, CSS3, JavaScript, GitHub Pages</p>
+    <p><strong>Tools & OS:</strong> Git, GitHub, Linux, Windows</p>
 </div>
+</section>
 
-<div class="section">
+<section>
 <h2>Projects</h2>
 
 <div class="project">
-<p class="project-title">Diabetes Prediction System</p>
-<p>
-Built a basic machine-learning pipeline in Python to predict diabetes risk using structured medical data.
-Worked on data preprocessing, feature selection, and model evaluation as part of learning applied ML concepts.
-</p>
-<div class="tags">
-<span class="tag">Python</span>
-<span class="tag">Machine Learning</span>
-<a href="https://github.com/uday56p/DiabetesPredictionSystem1">Source</a>
-</div>
-</div>
-
-<div class="project">
-<p class="project-title">Strength Training Dashboard</p>
-<p>
-A static web project created using HTML and CSS to organize and present workout routines.
-Focused on clean structure, readability, and simple user navigation.
-</p>
-<div class="tags">
-<span class="tag">HTML</span>
-<span class="tag">CSS</span>
-<a href="https://github.com/uday56p/strength-training">Source</a>
-</div>
+    <div class="project-title">Diabetes Prediction System</div>
+    <div class="project-desc">
+        Implemented a basic machine learning workflow in Python to explore diabetes risk prediction.
+        Focused on understanding data preprocessing, feature handling, and evaluating model output.
+    </div>
+    <div class="project-meta">
+        Python · Introductory Machine Learning ·
+        <a href="https://github.com/uday56p/DiabetesPredictionSystem1">Source Code</a>
+    </div>
 </div>
 
 <div class="project">
-<p class="project-title">Mini JavaScript Project</p>
-<p>
-A small JavaScript project demonstrating basic programming logic, event handling,
-and interaction with simple UI elements.
-</p>
-<div class="tags">
-<span class="tag">JavaScript</span>
-<a href="https://github.com/uday56p/mini-project">Source</a>
-</div>
-</div>
-
+    <div class="project-title">Strength Training Dashboard</div>
+    <div class="project-desc">
+        Created a static web interface using HTML and CSS to organize workout routines
+        with emphasis on structure and readability.
+    </div>
+    <div class="project-meta">
+        HTML · CSS ·
+        <a href="https://github.com/uday56p/strength-training">Source Code</a>
+    </div>
 </div>
 
-<div class="section">
-<h2>GitHub</h2>
-<p>
-All repositories and source code available at
-<a href="https://github.com/uday56p">github.com/uday56p</a>
-</p>
+<div class="project">
+    <div class="project-title">Mini JavaScript Project</div>
+    <div class="project-desc">
+        Small JavaScript project built to practice core language concepts such as logic flow,
+        event handling, and basic DOM interaction.
+    </div>
+    <div class="project-meta">
+        JavaScript ·
+        <a href="https://github.com/uday56p/mini-project">Source Code</a>
+    </div>
 </div>
+
+</section>
+
+<footer>
+    This portfolio intentionally reflects a minimal and honest representation of current skills.
+</footer>
 
 </div>
 </body>
 </html>
+
 
