@@ -3,65 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uday | Portfolio</title>
+    <title>Uday Prakash | Portfolio</title>
     <style>
-        :root { --green: #00ff41; --bg: #0a0a0a; --gray: #888; }
-        body { background: var(--bg); color: var(--green); font-family: 'Courier New', monospace; padding: 20px; line-height: 1.5; }
-        .container { max-width: 800px; margin: 0 auto; border: 1px solid #333; padding: 30px; box-shadow: 0 0 20px rgba(0, 255, 65, 0.05); }
-        .header { border-bottom: 2px solid var(--green); margin-bottom: 20px; padding-bottom: 10px; }
-        .cmd { color: #fff; margin-right: 10px; }
-        .section { margin-bottom: 40px; }
-        h2 { font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; border-left: 4px solid var(--green); padding-left: 10px; }
-        .content { color: #ccc; margin-left: 20px; }
-        .project-card { border: 1px solid #222; padding: 15px; margin-top: 10px; border-radius: 4px; }
-        a { color: var(--green); text-decoration: none; font-weight: bold; }
-        a:hover { background: var(--green); color: var(--bg); }
-        .status { display: inline-block; background: #222; padding: 2px 8px; border-radius: 3px; font-size: 0.8rem; color: #fff; }
+        :root {
+            --primary-color: #00ff41;
+            --bg-color: #0a0a0a;
+            --text-light: #ccc;
+            --section-border: #222;
+        }
+        body {
+            background: var(--bg-color);
+            color: var(--primary-color);
+            font-family: 'Courier New', monospace;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px 0;
+        }
+        header {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        a:hover {
+            background: var(--primary-color);
+            color: var(--bg-color);
+        }
+        h1, h2 {
+            margin: 0;
+        }
+        h2 {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 10px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        section {
+            margin-bottom: 35px;
+        }
+        .project-card {
+            background: #0d0d0d;
+            border: 1px solid var(--section-border);
+            border-radius: 4px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        .tag {
+            display: inline-block;
+            background: #1a1a1a;
+            color: #fff;
+            padding: 3px 8px;
+            margin-right: 6px;
+            font-size: 0.75rem;
+            border: 1px solid #444;
+            border-radius: 4px;
+        }
+        .content p {
+            margin: 5px 0;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>UDAY_PORTFOLIO_V1.0</h1>
-            <p><span class="cmd">STATUS:</span> ACTIVE_JOB_SEEKER</p>
-            <p><span class="cmd">LOCATION:</span> MATHURA/NOIDA</p>
-        </div>
+        <header>
+            <h1>Uday Prakash</h1>
+            <p>GLA University, B.Tech in Computer Science (Class of 2025)</p>
+            <p>Email: <a href="mailto:puday8994@gmail.com">puday8994@gmail.com</a></p>
+        </header>
 
-        <div class="section">
-            <h2>01. EDUCATION</h2>
+        <section>
+            <h2>Technical Skills</h2>
             <div class="content">
-                <p><strong>B.Tech in Computer Science & Engineering</strong></p>
-                <p>Graduated: May 2025</p>
-                <p>Key Coursework: Networking, Operating Systems, Database Management Systems.</p>
+                <p><strong>Languages:</strong> Python, C, JavaScript</p>
+                <p><strong>Web:</strong> HTML5, CSS3, JavaScript, Deployment via GitHub Pages</p>
+                <p><strong>Tools & OS:</strong> Linux, Windows, Git, GitHub</p>
             </div>
-        </div>
+        </section>
 
-        <div class="section">
-            <h2>02. TECHNICAL_SKILLS</h2>
+        <section>
+            <h2>Projects</h2>
             <div class="content">
-                <p><span class="cmd">></span> Web: HTML5, CSS3, Basic JavaScript</p>
-                <p><span class="cmd">></span> OS: Windows, Linux (Basic Command Line)</p>
-                <p><span class="cmd">></span> Tools: Git, GitHub, VS Code</p>
-            </div>
-        </div>
 
-        <div class="section">
-            <h2>03. ACADEMIC_PROJECTS</h2>
-            <div class="content">
-                <div class="project-card">
-                    <p><strong>[Final Year Project Name]</strong> <span class="status">COMPLETED</span></p>
-                    <p>Developed a system using [Technology name, e.g., Java/Python] focused on automating [One line about what it did].</p>
-                </div>
-            </div>
-        </div>
+                <article class="project-card">
+                    <p><strong>Diabetes Prediction System</strong></p>
+                    <p>A prediction engine using Python, focusing on data preprocessing, feature selection, and model evaluation to assess diabetes risk.</p>
+                    <span class="tag">Python</span>
+                    <span class="tag">Machine Learning</span>
+                    <a href="https://github.com/uday56p/DiabetesPredictionSystem1">Source</a>
+                </article>
 
-        <div class="section">
-            <h2>04. CONTACT_INITIALIZE</h2>
-            <div class="content">
-                <p>Email: <a href="mailto:your_email@gmail.com">your_email@gmail.com</a></p>
-                <p>GitHub: <a href="https://github.com/uday56p">github.com/uday56p</a></p>
+                <article class="project-card">
+                    <p><strong>Strength Training Dashboard</strong></p>
+                    <p>Personal fitness project with structured HTML content providing workout routines and tracking logic.</p>
+                    <span class="tag">HTML</span>
+                    <span class="tag">Web UI</span>
+                    <a href="https://github.com/uday56p/strength-training">Source</a>
+                </article>
+
+                <article class="project-card">
+                    <p><strong>Mini Project</strong></p>
+                    <p>JavaScript based mini project demonstrating core language logic and simple interaction.</p>
+                    <span class="tag">JavaScript</span>
+                    <a href="https://github.com/uday56p/mini-project">Source</a>
+                </article>
+
             </div>
-        </div>
+        </section>
+
+        <section>
+            <h2>GitHub & Code</h2>
+            <div class="content">
+                <p>Access all code and repositories at:</p>
+                <p><a href="https://github.com/uday56p">github.com/uday56p</a></p>
+            </div>
+        </section>
+
     </div>
 </body>
 </html>
