@@ -1,72 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uday Prakash | GLAU '25</title>
-    <style>
-        :root { --green: #00ff41; --bg: #0a0a0a; }
-        body { background: var(--bg); color: var(--green); font-family: 'Courier New', monospace; padding: 20px; line-height: 1.6; }
-        .container { max-width: 850px; margin: 0 auto; border: 1px solid #333; padding: 30px; }
-        .header { border-bottom: 2px solid var(--green); margin-bottom: 25px; padding-bottom: 10px; }
-        .cmd { color: #fff; margin-right: 10px; }
-        .section { margin-bottom: 35px; }
-        h2 { font-size: 1.1rem; text-transform: uppercase; border-left: 4px solid var(--green); padding-left: 10px; margin-bottom: 15px; }
-        .content { color: #ccc; margin-left: 20px; }
-        .project-card { border: 1px solid #222; padding: 15px; margin-bottom: 15px; background: #0d0d0d; border-radius: 4px; }
-        a { color: var(--green); text-decoration: none; font-weight: bold; }
-        a:hover { background: var(--green); color: var(--bg); }
-        .tag { display: inline-block; background: #1a1a1a; padding: 2px 8px; border-radius: 3px; font-size: 0.75rem; color: #fff; border: 1px solid #444; margin-right: 5px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uday Prakash | Portfolio</title>
+
+<style>
+:root {
+    --bg: #0b0b0b;
+    --text: #cfcfcf;
+    --heading: #ffffff;
+    --accent: #00ff41;
+    --card: #111;
+    --border: #2a2a2a;
+}
+
+[data-theme="light"] {
+    --bg: #ffffff;
+    --text: #333333;
+    --heading: #000000;
+    --accent: #0a7f2e;
+    --card: #f7f7f7;
+    --border: #dddddd;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Courier New", monospace;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+header {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: var(--heading);
+    margin-bottom: 5px;
+}
+
+h2 {
+    color: var(--heading);
+    font-size: 1.1rem;
+    border-left: 4px solid var(--accent);
+    padding-left: 10px;
+    margin-top: 35px;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.project {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.project-title {
+    color: var(--heading);
+    font-weight: bold;
+}
+
+.tags {
+    margin-top: 8px;
+}
+
+.tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    margin-right: 6px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--text);
+}
+
+.toggle {
+    float: right;
+    cursor: pointer;
+    font-size: 0.85rem;
+    border: 1px solid var(--border);
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+</style>
+
+<script>
+function toggleTheme() {
+    const html = document.documentElement;
+    html.dataset.theme =
+        html.dataset.theme === "light" ? "dark" : "light";
+}
+</script>
 </head>
+
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>UDAY_PRAKASH_CONSOLE_V1.2</h1>
-            <p><span class="cmd">INSTITUTION:</span> GLA University, Mathura</p>
-            <p><span class="cmd">CREDENTIALS:</span> B.Tech CSE (2025) | CPI: 7.26</p>
-            <p><span class="cmd">CONTACT:</span> <a href="mailto:puday8994@gmail.com">puday8994@gmail.com</a></p>
-        </div>
+<div class="container">
 
-        <div class="section">
-            <h2>01. TECHNICAL_INVENTORY</h2>
-            <div class="content">
-                <p><span class="cmd">></span> Language: Python (Data Processing), C, Java</p>
-                <p><span class="cmd">></span> Web: HTML5, CSS3, JavaScript (Deployment via GitHub Pages)</p>
-                <p><span class="cmd">></span> OS: Linux Terminal Operations, Windows Administration</p>
-            </div>
-        </div>
+<header>
+    <span class="toggle" onclick="toggleTheme()">Toggle Theme</span>
+    <h1>Uday Prakash</h1>
+    <p>GLA University — B.Tech Computer Science (2025)</p>
+    <p>Email: <a href="mailto:puday8994@gmail.com">puday8994@gmail.com</a></p>
+    <p>Entry-level software developer | Python, JavaScript | GitHub-based workflow</p>
+</header>
 
-        <div class="section">
-            <h2>02. PROJECT_LOGS</h2>
-            <div class="content">
-                <div class="project-card">
-                    <p><strong>DIABETES_PREDICTION_ENGINE</strong></p>
-                    <p>Implemented a diagnostic prediction model using Python. Focused on data preprocessing and feature analysis to identify health risks based on medical datasets.</p>
-                    <span class="tag">Python</span> <span class="tag">Machine Learning</span> <span class="tag">Data Logic</span>
-                </div>
+<div class="section">
+<h2>Technical Skills</h2>
+<p><strong>Languages:</strong> Python, C, JavaScript</p>
+<p><strong>Web:</strong> HTML5, CSS3, JavaScript, GitHub Pages</p>
+<p><strong>Tools & OS:</strong> Linux, Windows, Git, GitHub</p>
+</div>
 
-                <div class="project-card">
-                    <p><strong>B.TECH_CAPSTONE_PROJECT (GLAU)</strong></p>
-                    <p>Final year research and development focused on [Enter Title Here]. Applied software engineering principles to solve complex logic problems.</p>
-                    <span class="tag">Academic</span> <span class="tag">Full-Stack</span>
-                </div>
+<div class="section">
+<h2>Projects</h2>
 
-                <div class="project-card">
-                    <p><strong>MINI_CORE_PROJECT</strong></p>
-                    <p>A functional implementation showcasing basic programming logic and UI/UX fundamentals.</p>
-                    <span class="tag">Mini-Project</span> <span class="tag">Logic Flow</span>
-                </div>
-            </div>
-        </div>
+<div class="project">
+<p class="project-title">Diabetes Prediction System</p>
+<p>
+Built a basic machine-learning pipeline in Python to predict diabetes risk using structured medical data.
+Worked on data preprocessing, feature selection, and model evaluation as part of learning applied ML concepts.
+</p>
+<div class="tags">
+<span class="tag">Python</span>
+<span class="tag">Machine Learning</span>
+<a href="https://github.com/uday56p/DiabetesPredictionSystem1">Source</a>
+</div>
+</div>
 
-        <div class="section">
-            <h2>03. REPOSITORY_LINK</h2>
-            <div class="content">
-                <p>Full project source code available for review at:</p>
-                <p><span class="cmd">></span> <a href="https://github.com/uday56p">github.com/uday56p</a></p>
-            </div>
-        </div>
-    </div>
+<div class="project">
+<p class="project-title">Strength Training Dashboard</p>
+<p>
+A static web project created using HTML and CSS to organize and present workout routines.
+Focused on clean structure, readability, and simple user navigation.
+</p>
+<div class="tags">
+<span class="tag">HTML</span>
+<span class="tag">CSS</span>
+<a href="https://github.com/uday56p/strength-training">Source</a>
+</div>
+</div>
+
+<div class="project">
+<p class="project-title">Mini JavaScript Project</p>
+<p>
+A small JavaScript project demonstrating basic programming logic, event handling,
+and interaction with simple UI elements.
+</p>
+<div class="tags">
+<span class="tag">JavaScript</span>
+<a href="https://github.com/uday56p/mini-project">Source</a>
+</div>
+</div>
+
+</div>
+
+<div class="section">
+<h2>GitHub</h2>
+<p>
+All repositories and source code available at
+<a href="https://github.com/uday56p">github.com/uday56p</a>
+</p>
+</div>
+
+</div>
 </body>
 </html>
+
